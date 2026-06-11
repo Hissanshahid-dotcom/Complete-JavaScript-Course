@@ -6,20 +6,17 @@ Welcome to the first milestone of my JavaScript journey! This folder contains de
 
 ## 📊 Developer Dashboard & Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Hissanshahid-dotcom&repo=Complete-JavaScript-Course&theme=tokyonight&show_owner=false" alt="Repo Stats" />
-</p>
-
-### 🎯 Completion Matrix:
+<!-- Custom Badges Row -->
 <p align="left">
-  <img src="https://geps.dev/progress/100?text=CHAPTER+01+LOCKOUT&color=ff9f43" alt="Animated Progress" width="450" />
+  <img src="https://img.shields.io/badge/PROGRESS-100%25-orange?style=for-the-badge&logo=javascript&logoColor=white" alt="Progress" />
+  <img src="https://img.shields.io/badge/STATUS-LOCKED_IN_CLOUD-black?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
+  <img src="https://img.shields.io/badge/CHAPTER_WEIGHT-HIGH-red?style=for-the-badge" alt="Weight" />
 </p>
 
-### ⚡ Terminal Execution Metrics:
+### ⚡ Terminal Execution Metrics
 ```bash
-$ init --chapter-01
-📦 PROGRESS:  [████████████████████████████████████████] 100%
-📝 LOGS:      150+ Lines of Pure Console Execution
-🔥 RIGOR:     High-Tier Conceptual Revision
-🐛 PATCHES:   Const Mutation & Scope Traps Resolved
-STATUS:       SUCCESSFULLY SECURED IN CLOUD 🚀
+$ init --chapter-01 --rigorous-practice
+📦 REPO_PATH: Hissanshahid-dotcom/Complete-JavaScript-Course/Chapter-01
+📝 EXEC_LOGS: 150+ Lines of Pure Console Practice
+🔥 LEVEL:     MERN Stack Foundation Set
+🐛 PATCHES:   Const Mutation Loophole & Scope Traps Resolved
