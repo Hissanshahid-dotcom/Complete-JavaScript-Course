@@ -4,10 +4,22 @@ Welcome to the first milestone of my JavaScript journey! This folder contains de
 
 ---
 
-## 📊 Interactive Learning Stats
+## 📊 Developer Dashboard & Stats
 
-<!-- Chapter Progress Animated Bar -->
-### 🎯 Chapter Completion Status:
-![Progress Bar](https://geps.dev/progress/100?text=Chapter+01+Complete)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Hissanshahid-dotcom&repo=Complete-JavaScript-Course&theme=tokyonight&show_owner=false" alt="Repo Stats" />
+</p>
 
-### ⚡ Dev Execution Metrics:
+### 🎯 Completion Matrix:
+<p align="left">
+  <img src="https://geps.dev/progress/100?text=CHAPTER+01+LOCKOUT&color=ff9f43" alt="Animated Progress" width="450" />
+</p>
+
+### ⚡ Terminal Execution Metrics:
+```bash
+$ init --chapter-01
+📦 PROGRESS:  [████████████████████████████████████████] 100%
+📝 LOGS:      150+ Lines of Pure Console Execution
+🔥 RIGOR:     High-Tier Conceptual Revision
+🐛 PATCHES:   Const Mutation & Scope Traps Resolved
+STATUS:       SUCCESSFULLY SECURED IN CLOUD 🚀
