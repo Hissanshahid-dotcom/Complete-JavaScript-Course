@@ -1,44 +1,100 @@
-// ==========================================
-// CHAPTER 03: Loops & Arithmetic Edge Cases
-// ==========================================
+// =========================================================================
+// CHAPTER 03: JavaScript Arithmetic & Assignment Operators (Complete Log)
+// =========================================================================
+// Author: Muhammad Hissan Shahid
+// Description: Detailed edge cases, loop behaviours, and mathematical logic in JS.
 
-// 1. Addition Logic (+1 Shift vs Index match)
+let n = 5; // Default loop limit used for tests
+
+// -------------------------------------------------------------------------
+// 1. ADDITION OPERATOR (+=)
+// -------------------------------------------------------------------------
+// Standard sum accumulator. Initial 0 does NOT freeze the calculation.
 let sum1 = 0;
-let n = 5; 
-for(let i = 0; i < n; i++) {
-    sum1 += i; // Result: 10 (0+1+2+3+4)
+for (let i = 0; i < n; i++) {
+    sum1 += i; // 0 + 1 + 2 + 3 + 4
 }
+console.log("Addition (Index i):", sum1); // Output: 10
 
 let sum2 = 0;
-for(let i = 0; i < n; i++) {
-    sum2 += i + 1; // Result: 15 (1+2+3+4+5)
+for (let i = 0; i < n; i++) {
+    sum2 += (i + 1); // 1 + 2 + 3 + 4 + 5
 }
+console.log("Addition (i + 1):", sum2); // Output: 15
 
-// 2. Multiplication Rule (The Zero Trap)
-let times = 0;
-for(let i = 0; i < n; i++) {
-    times *= i * 1; // Result: 0 (Initial 0 makes everything zero)
+
+// -------------------------------------------------------------------------
+// 2. MULTIPLICATION OPERATOR (*=)
+// -------------------------------------------------------------------------
+// The Zero Trap: If initial value is 0, any multiplication results in 0.
+let times0 = 0;
+for (let i = 0; i < n; i++) {
+    times0 *= (i * 1); 
 }
+console.log("Multiplication (Started with 0):", times0); // Output: 0
 
-// 3. Exponentiation Operator Twister
-let exponential = 0;
-for(let i = 0; i < n; i++) {
-    exponential **= i ** 1; // Result: 1 (Because 0**0 evaluates to 1 in JS)
+// Correct usage starting with 1 (Factorial style)
+let times1 = 1;
+for (let i = 0; i < n; i++) {
+    times1 *= (i + 1); // 1 * 1 * 2 * 3 * 4 * 5
 }
+console.log("Multiplication (Started with 1):", times1); // Output: 12
 
-// 4. Division Forbidden Rules (Infinity vs NaN)
-let divide1 = 1;
-for(let i = 0; i < n; i++) {
-    divide1 /= i / 1; // Result: Infinity (1 / 0 makes it Infinity)
+
+// -------------------------------------------------------------------------
+// 3. EXPONENTIATION OPERATOR (**=)
+// -------------------------------------------------------------------------
+// Edge Case: 0 raised to the power of 0 (0 ** 0) evaluates to 1 in Math/JS.
+let exponential1 = 0;
+for (let i = 0; i < n; i++) {
+    exponential1 **= (i ** 1); // Round 1 evaluates 0 ** 0 -> changes variable to 1
 }
+console.log("Exponentiation (i ** 1):", exponential1); // Output: 1
 
-let divide2 = 0;
-for(let i = 0; i < n; i++) {
-    divide2 /= i / 1; // Result: NaN (0 / 0 is Indeterminate)
+let exponential2 = 0;
+for (let i = 0; i < n; i++) {
+    exponential2 **= (i + 1); // Round 1 evaluates 0 ** 1 -> stays 0
 }
+console.log("Exponentiation (i + 1):", exponential2); // Output: 0
 
-// 5. Modulus Edge Cases
+
+// -------------------------------------------------------------------------
+// 4. DIVISION OPERATOR (/=)
+// -------------------------------------------------------------------------
+// Rule A: Any positive number divided by 0 results in Infinity.
+let divideInfinity = 1;
+for (let i = 0; i < n; i++) {
+    divideInfinity /= (i / 1); // Round 1 evaluates 1 / 0
+}
+console.log("Division (1 / 0):", divideInfinity); // Output: Infinity
+
+// Rule B: 0 divided by 0 is indeterminate and results in NaN (Not a Number).
+let divideNaN = 0;
+for (let i = 0; i < n; i++) {
+    divideNaN /= (i / 1); // Round 1 evaluates 0 / 0
+}
+console.log("Division (0 / 0):", divideNaN); // Output: NaN
+
+// Note: 0 / 1 evaluates safely to 0 (completely opposite to 1 / 0).
+
+
+// -------------------------------------------------------------------------
+// 5. SUBTRACTION OPERATOR (-=)
+// -------------------------------------------------------------------------
+// Standard subtraction. Tracks signs and accumulation correctly.
+let subtract = 0;
+for (let i = 0; i < n; i++) {
+    subtract -= (i - 1); // Step breakdown tracking negative and positive shifts
+}
+console.log("Subtraction Final Result:", subtract); // Output: -5
+
+
+// -------------------------------------------------------------------------
+// 6. MODULUS OPERATOR (%=)
+// -------------------------------------------------------------------------
+// Remainder tracking. Dividing/modding by 0 causes indeterminate states.
 let modulus = 0;
-for(let i = 0; i < n; i++) {
-    modulus %= i % 1; // Result: NaN (0 % 0 behaves like 0 / 0)
+for (let i = 0; i < n; i++) {
+    modulus %= (i % 1); // Round 1 evaluates 0 % 0 -> invalid math mapping
 }
+console.log("Modulus (0 % 0):", modulus); // Output: NaN
