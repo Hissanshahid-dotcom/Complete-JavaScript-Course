@@ -98,3 +98,56 @@ for (let i = 0; i < n; i++) {
     modulus %= (i % 1); // Round 1 evaluates 0 % 0 -> invalid math mapping
 }
 console.log("Modulus (0 % 0):", modulus); // Output: NaN
+// ... (Lines 1 to 100 remain exactly as they are in your file) ...
+
+// =========================================================================
+// CHAPTER 03: EXTENSION - LOOPS & FUNCTIONS PRACTICE
+// =========================================================================
+
+// 1. WHILE LOOP
+let i1 = 1;
+while(i1 < 10){
+    console.log("While Loop i:", i1);
+    i1++;
+}
+
+// 2. DO-WHILE LOOP
+let i2 = 0;
+do{
+    console.log("Do-While Loop i:", i2);
+    i2++;
+} while(i2 < -1);
+
+// 3. FUNCTIONS & ARROW FUNCTIONS
+function overlap(r, u){
+    console.log("Hy this is this in this legend era");
+    return(r % u);
+}
+let p = 56;
+let y = 44;
+console.log("Overlap Result:", overlap(p, y));
+
+const vegabounds = () => {
+    console.log("Hello");
+    return("HI");
+}
+let j = vegabounds();
+console.log("Arrow Function Result:", j);
+
+const hell = (t, o) => { return(t * o); }
+console.log("Hell Multiplication:", hell(p, y));
+
+// 4. PRACTICE SET: OBJECTS & LOOPS
+const loopData = { "helwo": 22, "pakoo": 34 };
+for(let a in loopData){
+    console.log("Forbidden loop key/val:", a, loopData[a]);
+}
+
+const promean = (a, s, d, f) => {
+    return 4 / (a + s + d + f) % 5;
+}
+console.log("Mean Calculation:", promean(5, 5, 5, 5));
+
+// =========================================================================
+// END OF EXTENSION
+// =========================================================================
