@@ -1,39 +1,58 @@
 // =========================================================================
-// CHAPTER 05: JavaScript Array Methods (Practice Set)
+// CHAPTER 05: JavaScript Arrays & Advanced Methods
 // =========================================================================
 // Author: Muhammad Hissan Shahid
-// Description: Array transformation, mutation, and string conversion methods.
+// Description: Comprehensive guide to Array manipulation, mutation, and conversion.
 
+// 1. ARRAY INITIALIZATION & ACCESS
+let arr = [26, 23, 55, 44, 78];
+console.log("Original Array:", arr);
+
+// Accessing and modifying elements
+arr[0] = 555; // Updating index 0
+arr[5] = 647; // Adding new element at index 5
+console.log("Modified Array:", arr);
+
+// 2. ITERATING OVER ARRAYS (Using For Loop)
+// Professional way to access each element
+for (let i = 0; i < arr.length; i++) {
+    console.log(`Index ${i} contains: ${arr[i]}`);
+}
+
+// 3. ARRAY STRING CONVERSION
 let pearpick = [44, 33, 333, 322, 111];
-console.log("Original Array:", pearpick);
+console.log("Type of original array:", typeof pearpick); // "object"
 
-// 1. STRING CONVERSION
 let pear = pearpick.toString();
 console.log("Type after toString:", typeof pear); // "string"
 
-// 2. JOIN METHOD (Custom Separator)
-// join() se hum array ke elements ko kisi bhi character se jod sakte hain
+// 4. JOIN METHOD
+// Joins array elements into a string with a custom separator
 console.log("Joined Array:", pearpick.join(" sorted__ "));
 
-// 3. MUTATION METHODS (Modifying Original Array)
-// pop(): Removes the last element
+// 5. MUTATION METHODS (Modifying the Original Array)
+// pop(): Removes the last element and returns it
 console.log("Popped element:", pearpick.pop()); 
-console.log("Array after pop:", pearpick);
+console.log("After pop:", pearpick);
 
-// push(): Adds element to the end
+// push(): Adds a new element to the end and returns new length
 pearpick.push("string__");
-console.log("Array after push:", pearpick);
+console.log("After push:", pearpick);
 
-// shift(): Removes the first element
+// shift(): Removes the first element and returns it
 console.log("Shifted element:", pearpick.shift());
-console.log("Array after shift:", pearpick);
+console.log("After shift:", pearpick);
 
-// unshift(): Adds element to the beginning
+// unshift(): Adds a new element to the beginning and returns new length
 pearpick.unshift("adding");
-console.log("Array after unshift:", pearpick);
+console.log("After unshift:", pearpick);
 
 // =========================================================================
-// KEY TAKEAWAY:
-// - pop() / push() modify the END of an array.
-// - shift() / unshift() modify the START of an array.
+// SUMMARY OF ARRAY METHODS:
+// - toString(): Converts array to comma-separated string.
+// - join(): Converts array to string with specific separator.
+// - pop(): Removes element from END.
+// - push(): Adds element to END.
+// - shift(): Removes element from START.
+// - unshift(): Adds element to START.
 // =========================================================================
