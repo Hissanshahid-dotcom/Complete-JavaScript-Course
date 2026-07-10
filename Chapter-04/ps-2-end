@@ -1,0 +1,59 @@
+// =========================================================================
+// CHAPTER 04: JavaScript Strings - Masterclass Notes
+// =========================================================================
+// Author: Muhammad Hissan Shahid
+// Description: Comprehensive reference for String creation, methods, and manipulation.
+
+// 1. INITIALIZATION & INDEXING
+let a = "hello";
+let b = 'tree';
+console.log(a.length, b.length);
+console.log(a[0], a[1], a[2], a[3], a[4]); // Zero-based indexing
+
+// 2. TEMPLATE LITERALS & ESCAPE SEQUENCES
+// Use backticks (`) for dynamic string construction
+let h = "Prince", j = "persia";
+let sentence = `${h} is met a ${j} from over the whole life`;
+console.log(sentence);
+
+// Escape sequences for special characters
+console.log("Newline test:\n", "Newline\nExample");
+console.log("Tab test:\t", "Tab\tExample");
+console.log("Carriage Return test:\r", "Carriage\rReturn");
+
+// 3. STRING METHODS (CodeWithHarry Standards)
+let cases = "Hissan";
+console.log(cases.toUpperCase());
+console.log(cases.toLowerCase());
+console.log(cases.slice(2, 5)); // Extracts index 2 to 4
+console.log(cases.slice(2));    // Extracts from index 2 to end
+console.log(cases.replace("Hi", "hearo"));
+console.log(cases.trim());      // Removes whitespaces
+console.log(cases[4]);          // Accessing character
+
+// 4. SEARCHING & VALIDATION
+const year = "Thats a spectual year";
+const year1 = "Thats a specious set Thats a spectual year";
+console.log(year1.includes(year)); // Boolean check
+console.log(year.endsWith("year"));
+console.log(year.startsWith("Thats"));
+
+// 5. TYPE CONVERSION (String to Number)
+let tr = "this is 10000000";
+let rar = tr.slice(7).trim(); // Extract number string
+let rare = parseInt(rar);     // Conversion to integer
+console.log("Value:", rare, "| Type:", typeof rare);
+
+// 6. IMMUTABILITY & PRACTICE
+// Note: Strings are immutable. Original string is never changed.
+let stree = "Most-Popular";
+console.log(stree.replace("Pop", "kgf"));
+
+// Quick Quiz: Looping through string
+for (let i = 0; i < cases.length; i++) {
+    console.log(`Index ${i} contains: ${cases[i]}`);
+}
+
+// =========================================================================
+// CHAPTER 04 COMPLETE.
+// =========================================================================
