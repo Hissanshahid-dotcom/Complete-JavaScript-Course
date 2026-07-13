@@ -56,3 +56,63 @@ console.log("After unshift:", pearpick);
 // - shift(): Removes element from START.
 // - unshift(): Adds element to START.
 // =========================================================================
+// =========================================================================
+// 7. ARRAY ITERATION LOOPS
+// =========================================================================
+
+let looper = [25, 32, 45, 64, 21];
+
+// forEach(): Calls a function for each array element
+console.log("Using forEach:");
+looper.forEach((element, index) => {
+    console.log(`Index ${index}: ${element}`);
+});
+
+// for...of: Iterates over the values of an array
+console.log("Using for...of:");
+for (let val of looper) {
+    console.log(val);
+}
+
+// for...in: Iterates over the keys (indices) of an array
+console.log("Using for...in:");
+for (let key in looper) {
+    console.log(`Key ${key}: ${looper[key]}`);
+}
+
+// =========================================================================
+// SUMMARY OF ITERATION METHODS:
+// - forEach(): Best for applying a function to each item.
+// - for...of(): Best for clean, readable access to array values.
+// - for...in(): Best for accessing indices (keys) of the array.
+// =========================================================================
+// =========================================================================
+// 6. ADVANCED ARRAY METHODS (Functional Programming)
+// =========================================================================
+
+// map(): Creates a new array by applying a function to every element
+let p = [1, 2, 3, 4, 5];
+let per = p.map((element) => element * element); 
+console.log("Map (Squared Array):", per);
+
+// filter(): Filters elements based on a condition
+let r = [23, 12, 21, 53];
+let filteredArray = r.filter((val) => val < 34);
+console.log("Filter (Values < 34):", filteredArray);
+
+// reduce(): Reduces array to a single value
+let code = [1, 2, 3, 4, 5];
+let sum = code.reduce((h1, h2) => h1 + h2);
+console.log("Reduce (Sum of Array):", sum);
+
+// Array.from(): Converts strings or nodeLists to Arrays
+let gears = "GEAR";
+console.log("Array.from string:", Array.from(gears));
+
+// =========================================================================
+// SUMMARY OF ADVANCED METHODS:
+// - map(): Creates NEW array (doesn't change original).
+// - filter(): Filters elements based on test (returns NEW array).
+// - reduce(): Performs operation on elements and returns a SINGLE value.
+// - Array.from(): Creates an array from an object/string.
+// =========================================================================
